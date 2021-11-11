@@ -1,0 +1,146 @@
+.app {
+	height: 100vh;
+	display: flex;
+	background-color: rgb(17, 7, 53);
+	color: white;
+}
+.main {
+	width: 100%;
+	background: url('https://wallpaperaccess.com/full/4199011.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+.top {
+	height: 50%;
+	position: relative;
+}
+.foto {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: 700;
+	position: absolute;
+	bottom: 10px;
+	left: 80px;
+}
+.bottom {
+	height: 50%;
+}
+.trivia {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.question {
+	width: 80%;
+	height: 40%;
+	background: linear-gradient(rgb(71, 21, 67), black);
+	border: 2px solid white;
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+}
+.answers {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/* .answer {
+	width: 40%;
+	background: linear-gradient(rgb(150, 22, 139), black);
+	border: 2px solid white;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+	margin: 10px;
+} */
+
+.answer:hover,
+.answer.active {
+	background: rgb(17, 17, 199);
+}
+
+.answer.correct {
+	animation: correct 3s ease forwards;
+}
+.lost {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+@keyframes correct {
+	0%,
+	22%,
+	42% {
+		background: mediumblue;
+	}
+	20%,
+	40%,
+	60% {
+		background: linear-gradient(rgb(150, 22, 139), black);
+	}
+	62%,
+	100% {
+		background: green;
+	}
+}
+.answer.wrong {
+	animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+	0%,
+	22%,
+	42% {
+		background: mediumblue;
+	}
+	20%,
+	40%,
+	60% {
+		background: linear-gradient(rgb(150, 22, 139), black);
+	}
+	62%,
+	100% {
+		background: red;
+	}
+}
+
+.pyramid {
+	width: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.moneyList {
+	list-style: none;
+	width: 100%;
+	padding: 20px;
+}
+
+.moneyListItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.moneyListItemNumber {
+	padding-right: 1rem;
+}
+
+.moneyListItem.active {
+	background: teal;
+}
